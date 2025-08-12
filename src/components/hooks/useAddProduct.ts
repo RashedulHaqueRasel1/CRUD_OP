@@ -3,14 +3,14 @@
 import { useMutation } from "@tanstack/react-query";
 import { z } from "zod";
 
-const FormSchema = z.object({
-  name: z.string(),
-  description: z.string(),
-  price: z.string(),
-  image: z.instanceof(File),
-});
-
-type ProductFormValues = z.infer<typeof FormSchema>;
+type ProductFormValues = z.infer<
+  ReturnType<typeof z.object<{
+    name: z.ZodString;
+    description: z.ZodString;
+    price: z.ZodString;
+    image: z.ZodType<File>;
+  }>>
+>;
 
 export default function useAddProduct() {
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;

@@ -77,8 +77,7 @@ export default function SingleProduct() {
     const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
     const updatedCart = [...existingCart, product];
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-
-    alert(`${product.name} added to cart!`);
+    toast.success(`${product.name} added to cart!`);
   };
 
   if (!product) {

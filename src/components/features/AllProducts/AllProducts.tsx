@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, Eye } from "lucide-react";
 import { useAllProducts } from "@/components/hooks/useAllProduct";
 import Link from "next/link";
+import { toast } from "sonner";
 
 interface Product {
   _id: string;
@@ -28,8 +29,7 @@ export default function AllProducts() {
     const existingCart = JSON.parse(localStorage.getItem("cart") || "[]");
     const updatedCart = [...existingCart, product];
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-
-    alert(`${product.name} added to cart!`);
+    toast.success(`${product.name} added to cart!`);
   };
 
   if (isLoading) return <p className="text-center py-10">Loading...</p>;
