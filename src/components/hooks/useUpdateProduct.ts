@@ -20,6 +20,7 @@ export default function useUpdateProduct(id: string) {
       formData.append("description", data.description);
       formData.append("price", data.price);
 
+
       if (data.image instanceof File) {
         formData.append("image", data.image);
       }
