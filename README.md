@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛍️ CRUD Operation Project
 
-## Getting Started
+A simple **Next.js** application demonstrating **full CRUD functionality** (Create, Read, Update, Delete) along with a local cart system using **localStorage**.  
+Users can:
 
-First, run the development server:
+- Add products (name, description, price, image upload)
+- View all products
+- Edit product details
+- Delete products
+- Add products to a shopping cart (data stored in `localStorage`)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Backend API handles all CRUD operations except the cart, which works from local storage.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Live Demo
+🔗 [Live Website](https://crud-op-omega.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** [Next.js](https://nextjs.org/) (TypeScript)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/)
+- **Data Fetching & Mutations:** [TanStack Query](https://tanstack.com/query)
+- **Image Handling:** Next.js Image & API
+- **State & Storage:** LocalStorage (for cart)
+- **Deployment:** [Vercel](https://vercel.com/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ✨ Features
 
-## Deploy on Vercel
+- ➕ **Add Product** — with image upload
+- 📜 **View All Products** — fetched from backend API
+- ✏️ **Edit Product** — update name, description, price, and image
+- ❌ **Delete Product** — remove from backend database
+- 🛒 **Add to Cart** — stored in `localStorage` for persistence
+- ⚡ **Fast & Optimized** — powered by TanStack Query caching
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚙️ Installation & Local Setup
+
+Follow these steps to run the project locally:
+### 1️⃣ Clone the Repository
+ 
+- git clone https://github.com/RashedulHaqueRasel1/CRUD_OP.git
+
+- cd CRUD_OP
+
+2️⃣ Install Dependencies
+
+- npm install
+
+3️⃣ Set Up Environment Variables
+
+- NEXT_PUBLIC_API_BASE_URL=your_backend_api_url
+
+4️⃣ Run the Development Server
+
+- npm run dev
+
+## The app will be available at:
+👉 http://localhost:3000
